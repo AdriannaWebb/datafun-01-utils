@@ -1,4 +1,4 @@
-''' ITERATION 3.1
+''' ITERATION 4
 
 Module: Webb Analytics - Reusable Module for My Data Analytics Projects
 
@@ -8,8 +8,17 @@ A good byline could be used in every Python analytics project we do.
 Process:
 I'll test it in an online interpreter to ensure this version runs correctly before continuing.
 Process:
-In this third iteration, I declare additional variables to show skills with different data types
+In this fourth iteration, I introduce some basic statistics using Python:
+    - min()
+    - max()
+    - The statistics module offers methods to calculate mean and standard deviation
 '''
+######################################
+# Import Modules at the Top
+######################################
+
+import statistics
+
 #######################################
 # Declare global variables - keep byline at the end
 # We will use this information in a smarter byline
@@ -26,6 +35,19 @@ skills_offered: list = ["Mouse Catching", "Machine Learning", "Making A Mess"]
 
 # List of floats representing individual cat satisfaction scores
 client_satisfaction_scores: list = [4.8, 4.6, 4.9, 5.0, 4.7]
+
+#######################################
+# Calculate Basic Statistics
+#   Do this BEFORE we declare the byline
+#   So the values have been calculated
+#   and are ready for use in the byline.
+#######################################
+
+# Calculate basic stats using built-in functions min(), max() and statistics module functions mean() and stdev().
+min_score: float = min(client_satisfaction_scores)
+max_score: float = max(client_satisfaction_scores)
+mean_score: float = statistics.mean(client_satisfaction_scores)
+stdev_score: float = statistics.stdev(client_satisfaction_scores)
 
 #######################################
 # Declare a global variable named byline.
@@ -73,6 +95,4 @@ def main() -> None:
 
 if __name__ == '__main__':
     main()
-
-
 
