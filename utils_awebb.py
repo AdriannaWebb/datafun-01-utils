@@ -33,6 +33,14 @@ I'll test it in an online interpreter to ensure this version runs correctly befo
 byline: str = 'Webb Analytics: Analytics for the Web, by Webb'
 
 #####################################
+# Define the get_byline() Function
+#####################################
+
+def get_byline() -> str:
+    '''Return a byline for my analytics projects.'''
+    return byline
+
+#####################################
 # Define a main() function for this module.
 #####################################
 
@@ -55,4 +63,5 @@ def main() -> None:
 
 if __name__ == '__main__':
     main()
+
 
