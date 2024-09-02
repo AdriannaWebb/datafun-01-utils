@@ -1,98 +1,65 @@
-''' ITERATION 4
 
+# Online Python - IDE, Editor, Compiler, Interpreter
+
+''' ITERATION 5
 Module: Webb Analytics - Reusable Module for My Data Analytics Projects
 
 This module provides a simple, reusable foundation for my analytics projects. .
 A good byline could be used in every Python analytics project we do.
-
-Process:
-I'll test it in an online interpreter to ensure this version runs correctly before continuing.
-Process:
-In this fourth iteration, I introduce some basic statistics using Python:
-    - min()
-    - max()
-    - The statistics module offers methods to calculate mean and standard deviation
 '''
-######################################
-# Import Modules at the Top
-######################################
 
 import statistics
 
-#######################################
-# Declare global variables - keep byline at the end
-# We will use this information in a smarter byline
-#######################################
-
-# Boolean variable to indicate if the client has a black cat
 has_black_cat: bool = True
-
-# Integer variable for the number of black cats a client has
 number_of_black_cats: int = 1
-
-# List of strings representing the skills of each black cat
-skills_offered: list = ["Mouse Catching", "Machine Learning", "Making A Mess"]
-
-# List of floats representing individual cat satisfaction scores
+cat_skills_offered: list = ["Mouse Catching", "Machine Learning", "Making A Mess"]
 client_satisfaction_scores: list = [4.8, 4.6, 4.9, 5.0, 4.7]
+has_dog: bool = True
+number_of_dogs = int=2
+dog_skills_offered: list = ["Barking", "Walking", "Chewing Shoes"]
+dog_skill_test_scores: list = [5.8, 5.6, 5.9, 6.0, 5.7]
 
-#######################################
-# Calculate Basic Statistics
-#   Do this BEFORE we declare the byline
-#   So the values have been calculated
-#   and are ready for use in the byline.
-#######################################
+# Calculate basic stats for client satisfaction scores
+min_client_score: float = min(client_satisfaction_scores)
+max_client_score: float = max(client_satisfaction_scores)
+mean_client_score: float = statistics.mean(client_satisfaction_scores)
+stdev_client_score: float = statistics.stdev(client_satisfaction_scores)
 
-# Calculate basic stats using built-in functions min(), max() and statistics module functions mean() and stdev().
-min_score: float = min(client_satisfaction_scores)
-max_score: float = max(client_satisfaction_scores)
-mean_score: float = statistics.mean(client_satisfaction_scores)
-stdev_score: float = statistics.stdev(client_satisfaction_scores)
-
-#######################################
-# Declare a global variable named byline.
-# Make it a multiline f-string to show our information.
-#######################################
+# Calculate basic stats for dog skill test scores
+min_dog_score: float = min(dog_skill_test_scores)
+max_dog_score: float = max(dog_skill_test_scores)
+mean_dog_score: float = statistics.mean(dog_skill_test_scores)
+stdev_dog_score: float = statistics.stdev(dog_skill_test_scores)
 
 byline: str = f"""
 -------------------------------------------------
 Webb Analytics: Analytics for the Web, by Webb
 -------------------------------------------------
 Has Black Cat: {has_black_cat}
-Number of Black Cats:        {number_of_black_cats}
-Skills Offered:            {skills_offered}
+Number of Black Cats: {number_of_black_cats}
+Cat Skills Offered: {cat_skills_offered}
 Client Satisfaction Scores: {client_satisfaction_scores}
+Minimum Satisfaction Score: {min_client_score}
+Maximum Satisfaction Score: {max_client_score}
+Mean Satisfaction Score: {mean_client_score}
+Standard Deviation of Satisfaction Score: {stdev_client_score}
+Has Dog: {has_dog}
+Number of Dogs: {number_of_dogs}
+Dog Skills Offered: {dog_skills_offered}
+Dog Skills Test Score: {dog_skill_test_scores}
+Minimum of Dog Skills Test Score: {min_dog_score}
+Maximum of Dog Skills Test Score: {max_dog_score}
+Mean of Dog Skills Test Score: {mean_dog_score}
+Standard Deviation of Dog Skills Test Score: {stdev_dog_score}
 """
-
-#####################################
-# Define the get_byline() Function
-#####################################
 
 def get_byline() -> str:
     '''Return a byline for my analytics projects.'''
     return byline
 
-#####################################
-# Define a main() function for this module.
-#####################################
-
-# Create a function named main.
-# A function is a block of code that performs a specific task.
-# This function will simply print the byline to the console.
-# Add a type hint to indicate that this function doesn't return anything when called 
-# (that is, it has a Python type of None).
-# It doesn't need any additional information passed in, 
-# so there's nothing needed inside the parentheses.
-# Everything afer the colon (:) must be indented (usually 4 spaces)
-
 def main() -> None:
     '''Print the byline to the console when this function is called.'''
     print(byline)
 
-#####################################
-# Conditional Execution - Only call main() when executing this module as a script.
-#####################################
-
 if __name__ == '__main__':
     main()
-
