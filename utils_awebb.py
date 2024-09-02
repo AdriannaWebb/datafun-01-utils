@@ -1,4 +1,4 @@
-''' ITERATION 3
+''' ITERATION 3.1
 
 Module: Webb Analytics - Reusable Module for My Data Analytics Projects
 
@@ -15,16 +15,16 @@ In this third iteration, I declare additional variables to show skills with diff
 # We will use this information in a smarter byline
 #######################################
 
-# Boolean variable to indicate if the company has international clients
-has_international_clients: bool = True
+# Boolean variable to indicate if the client has a black cat
+has_black_cat: bool = True
 
-# Integer variable for the number of years in operation
-years_in_operation: int = 10
+# Integer variable for the number of black cats a client has
+number_of_black_cats: int = 1
 
-# List of strings representing the skills offered by the company
-skills_offered: list = ["Data Analysis", "Machine Learning", "Business Intelligence"]
+# List of strings representing the skills of each black cat
+skills_offered: list = ["Mouse Catching", "Machine Learning", "Making A Mess"]
 
-# List of floats representing individual client satisfaction scores
+# List of floats representing individual cat satisfaction scores
 client_satisfaction_scores: list = [4.8, 4.6, 4.9, 5.0, 4.7]
 
 #######################################
@@ -36,8 +36,8 @@ byline: str = f"""
 -------------------------------------------------
 Webb Analytics: Analytics for the Web, by Webb
 -------------------------------------------------
-Has International Clients: {has_international_clients}
-Years in Operation:        {years_in_operation}
+Has Black Cat: {has_black_cat}
+Number of Black Cats:        {number_of_black_cats}
 Skills Offered:            {skills_offered}
 Client Satisfaction Scores: {client_satisfaction_scores}
 """
@@ -73,5 +73,6 @@ def main() -> None:
 
 if __name__ == '__main__':
     main()
+
 
 
